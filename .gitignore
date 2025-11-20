@@ -1,0 +1,33 @@
+# Vagrant
+.vagrant/
+*.log
+*.tmp
+
+# VMware
+*.vmx
+*.vmxf
+*.vmdk
+*.vmsn
+*.vmsd
+*.vmss
+*.nvram
+*.log
+.vmware/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
