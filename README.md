@@ -14,7 +14,7 @@ We will deploy:
 These VMs are connected through a private network (VMnet11) for internal communication and a NAT/public network for Internet access. The KVM server is configured with a network bridge (kvmbr0) that allows guest VMs to communicate on the same network segment.
 
 ## Architecture
-
+    
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                    Host Machine                          │

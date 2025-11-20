@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
  
     kvm1.vm.provision "shell", path: "./installServerKVM.sh"
   end
-
+   
 
 
 

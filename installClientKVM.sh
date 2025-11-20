@@ -6,7 +6,7 @@
 # Système : CentOS Stream 10
 # Auteur : Idriss Ziadi (adapté)
 # =====================================================
-
+  
 set -e
 echo "=== Installation du client KVM sur CentOS Stream 10 ==="
 
