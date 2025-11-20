@@ -1,8 +1,10 @@
-# Lab: IaaS Environment with KVM using Vagrant and VMware
+# Lab: Infrastructure as Code (IaC) with KVM using Vagrant and VMware
 
 ## Overview
 
-This lab demonstrates how to set up an IaaS (Infrastructure as a Service) environment using Vagrant, KVM (Kernel-based Virtual Machine) on CentOS 9 Stream, and VMware Workstation/Player as the provider.
+This lab demonstrates how to implement **Infrastructure as Code (IaC)** principles using Vagrant, KVM (Kernel-based Virtual Machine) on CentOS 9 Stream, and VMware Workstation/Player as the provider. 
+
+**Infrastructure as Code (IaC)** is the practice of managing and provisioning computing infrastructure through machine-readable definition files, rather than physical hardware configuration or interactive configuration tools. This approach enables version control, automated deployment, and reproducible infrastructure environments.
 
 We will deploy:
 
@@ -596,45 +598,51 @@ sudo systemctl stop firewalld
 sudo systemctl disable firewalld
 ```
 
-## IaaS Concepts Demonstrated
+## Infrastructure as Code (IaC) Concepts Demonstrated
 
-This lab demonstrates several key IaaS concepts:
+This lab demonstrates several key Infrastructure as Code (IaC) concepts:
 
-### 1. Infrastructure as Code (IaC)
-- Vagrantfile defines infrastructure declaratively
-- Version-controlled infrastructure configuration
-- Reproducible environments
+### 1. Declarative Infrastructure Definition
+- **Vagrantfile** defines infrastructure using declarative syntax
+- Infrastructure configuration stored as code in version control
+- Reproducible and consistent environment deployments
+- Human-readable infrastructure specifications
 
-### 2. Virtualization and Hypervisors
-- KVM hypervisor installation and configuration
-- Type-1 hypervisor (KVM) running on Linux kernel
-- Resource allocation (CPU, RAM) per VM
+### 2. Automated Provisioning
+- **Automated VM creation** and configuration through Vagrant
+- **Shell script provisioning** for software installation and setup
+- **Idempotent operations** - scripts can be run multiple times safely
+- **Zero-touch deployment** from code to running infrastructure
 
-### 3. Network Virtualization
-- Virtual network switches (VMnet11)
-- Bridge networking for VM-to-VM communication
-- NAT networking for Internet access
-- Static IP configuration for predictable addressing
+### 3. Version Control and Collaboration
+- Infrastructure definitions tracked in Git
+- **Infrastructure changes** managed through standard development workflows
+- **Collaborative development** of infrastructure configurations
+- **Rollback capabilities** through version control history
 
-### 4. Provisioning and Automation
-- Automated software installation via shell scripts
-- Idempotent provisioning (can be run multiple times)
-- Configuration management through scripts
+### 4. Environment Consistency
+- **Identical environments** across development, testing, and production
+- **Elimination of configuration drift** through code-defined infrastructure
+- **Standardized deployments** reducing manual errors
+- **Documentation through code** - infrastructure is self-documenting
 
-### 5. VM Lifecycle Management
-- Create, start, stop, suspend, destroy operations
-- Remote management via SSH and libvirt API
-- Client-server architecture for VM management
+### 5. Virtualization Management
+- **KVM hypervisor** deployment and configuration as code
+- **Network topology** defined declaratively (bridges, private networks)
+- **Resource allocation** (CPU, RAM, storage) specified in configuration
+- **Multi-VM orchestration** with defined relationships
 
-### 6. Resource Management
-- CPU and memory allocation per VM
-- Network resource isolation
-- Storage management (implicit through Vagrant)
+### 6. Configuration Management
+- **Automated software installation** via provisioning scripts
+- **Service configuration** and startup automation
+- **Network bridge setup** and IP address assignment
+- **User and permission management** through scripts
 
-### 7. Multi-VM Environments
-- Orchestrating multiple VMs together
-- Network connectivity between VMs
-- Service separation (server vs client roles)
+### 7. Infrastructure Testing and Validation
+- **Rapid environment creation** for testing infrastructure changes
+- **Destroy and recreate** capabilities for clean testing
+- **Infrastructure validation** through automated deployment
+- **Continuous integration** of infrastructure changes
 
 ## Additional Resources
 
@@ -685,7 +693,7 @@ brctl show              # Show bridges
 
 ## Conclusion
 
-This lab provides a complete IaaS environment setup using modern tools. You've learned how to:
+This lab provides a complete Infrastructure as Code (IaC) environment setup using modern tools. You've learned how to:
 
 - Use Vagrant for infrastructure as code
 - Deploy and configure KVM hypervisor
@@ -697,7 +705,7 @@ This lab provides a complete IaaS environment setup using modern tools. You've l
 The environment is now ready for:
 - Creating and managing additional KVM guest VMs
 - Testing virtualization concepts
-- Learning IaaS principles
+- Learning Infrastructure as Code (IaC) principles
 - Developing cloud infrastructure skills
 
 ## License and Credits
